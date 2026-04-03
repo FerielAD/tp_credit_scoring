@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "credit_scoring_kedro"
 version = "1.0.0"
 description = "Projet MLOps de scoring de crédit avec Kedro — Formation MLOps ORSYS"
-requires-python = ">=3.12"
+requires-python = ">=3.11"
 readme = "README.md"
 dependencies = [
     # ── Kedro core ────────────────────────────────────────────────────────────
@@ -70,6 +70,9 @@ resolution = "lowest-direct"
 
 [tool.uv.sources]
 # Pas de sources custom — tout vient de PyPI
+
+[tool.uv.extra-build-dependencies]
+pyarrow = ["setuptools"]
 
 # ─── Kedro ───────────────────────────────────────────────────────────────────
 [tool.kedro]
